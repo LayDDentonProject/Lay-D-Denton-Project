@@ -142,7 +142,8 @@ function CreateControls()
 	CreateLDDPCheckboxes();
 	
 	//LDDP, 10/28/21: Modders: I suggest you do this, but for now we're using an Exec command for it.
-	AddTimer(0.1, false,, 'GiveTip');
+	if( bFemaleEnabled )
+		AddTimer(0.1, false,, 'GiveTip');
 }
 
 // ----------------------------------------------------------------------
