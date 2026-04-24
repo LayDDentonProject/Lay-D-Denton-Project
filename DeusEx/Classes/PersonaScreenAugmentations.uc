@@ -10,8 +10,6 @@ event InitWindow()
 	local int i;
 	local Texture TTex;
 	
-	Super.InitWindow();
-	
 	//Emergency fallback.
 	for (i=0; i<ArrayCount(AugHighlightTextures); i++)
 	{
@@ -30,7 +28,9 @@ event InitWindow()
 	if (TTex != None) AugHighlightTexturesFemale[4] = TTex;
 	TTex = Texture(DynamicLoadObject("FemJC.AugmentationsLocationSubdermalFem", class'Texture', false));
 	if (TTex != None) AugHighlightTexturesFemale[5] = TTex;
-	
+
+	Super.InitWindow();
+
 	EnableButtons();
 }
 
